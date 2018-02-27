@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Jura|Roboto+Slab|Open+Sans');
+
+.get_price_bottom{
+  border: 1px solid white !important;
+  background-color: tomato !important;
+  color: white !important;
+}
+.get_price_bottom:hover{
+  border: 1px solid tomato !important;
+  background-color: white !important;
+  color: tomato !important;
+}
+.modal-title{
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+.modal-body{
+  font-family: 'Open Sans', sans-serif;
+}
+.shadow_for_cards{
+  border-radius:2px;
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(158,158,158,0.75);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(158,158,158,0.75);
+  box-shadow: 0px 0px 10px -2px rgba(158,158,158,0.75);
+}
+
+#before_cards{
+  margin-bottom:25px;
+}
+.row .step_num{
+  font-family: 'Roboto Slab', serif;
+  font-size:20px;
+  border:none;
+  background-color: white;
+  padding:10px;
+  color:gray;
+}
+.row .step_info{
+  border-left: 5px solid tomato;
+  font-family: 'Jura', sans-serif;
+  color:gray;
+  font-size: 13px;
+}
+.step{
+  margin-bottom: 15px;
+}
+.row{
+  padding:0px;
+}
+.red{
+  color: tomato;
+}
+.card-title .btn-outline-info{
+  font-size:12px;
+  padding:0px 5px;
+}
+.modal{
+  z-index:1000000;
+}
+.over_show_res{
+  padding-left:10px;
+  color: gray;
+  font-size: 12px;
+  font-family: 'Jura', sans-serif;
+}
+span h1{
+  font-family: 'Berkshire Swash', cursive;
+}
+span h6{
+  font-family: 'Jura', sans-serif;
+}
+.text-info{
+  font-size:12px;
+}
+.btn-sm{
+  background-color: white;
+  border: 1px solid rgb(92, 184, 92);
+  color: rgb(92, 184, 92);
+}
+.hidden{
+  display:none 
+}
+small{
+  font-size: 11px;
+}
+.oferta{
+  font-size: 8px;
+  color:gray;
+}
+.form {
+  background-color: white;
+  margin: 35px auto;
+  max-width: 300px;
+  padding: 25px;
+  border:1px solid lightgray;
+  border-radius:2px;
+  -webkit-box-shadow: 0px 10px 35px -7px rgba(158,158,158,0.58);
+  -moz-box-shadow: 0px 10px 35px -7px rgba(158,158,158,0.58);
+  box-shadow: 0px 10px 35px -7px rgba(158,158,158,0.58);
+}
+.form a{
+  text-decoration:none;
+  color: white;
+}
+.show_res{
+  font-family: 'Roboto Slab', serif;
+  color: gray;
+  font-size: 120px;
+  margin-top: 0px;
+  width: 100%;
+  border-radius:7px;
+  border: 1px solid lightgray;
+  min-height: 100px;
+  -webkit-box-shadow: inset 0px -1px 31px -13px rgba(133,133,133,1);
+  -moz-box-shadow: inset 0px -1px 31px -13px rgba(133,133,133,1);
+  box-shadow: inset 0px -1px 31px -13px rgba(133,133,133,1);
+}
+.get_price{
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius:2px;
+  border-bottom: 3px solid steelblue; 
+}
+.get_price_circle{
+  width: 140px;
+  color: white;
+  font-size: 15px;
+  vertical-align: middle;
+  text-align: center;
+  position:relative;
+  border-radius:2px;
+  background-color: tomato;
+  padding:3px 5px;
+}
+.get_price_circle:hover{
+  background-color: steelblue;
+}
+.for_btn{
+  display: inline-block;
+  margin-right: 5px;
+}
+.icon_float{
+  float:left;
+}
+.vol_option{
+  padding:0
+}
+.vol_option button{
+  width: 100%;
+  margin-bottom: 5px;
+}
+.cards{
+  margin-top:20px;
+}
+.cards .col-sm-3{
+  padding:0px 5px;;
+}
+.card-header, .card-body{
+  padding:12px;
+  border-radius:2px;
+}
+.card-title{
+  font-size: 13px;
+  height:100px;
+  font-family: 'Open Sans', sans-serif;
+}
+.card-header{
+  background-color: lightseagreen;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  padding-bottom:3px;
+  
+}
+.fa-check-circle{
+  color: white;
+}
+.fa-check-circle:hover{
+  color: white;
+}
+.buttons .col-sm-2 span, .col-sm-3 span{
+  background-color: lightseagreen;
+  border-bottom: 3px  solid seagreen;
+  color: white;
+  border-radius:1px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.buttons .col-sm-2, .col-sm-3{
+  margin:0;
+  padding: 0 1px;
+}
+.buttons .col-sm-2 span:hover{
+  background-color: seagreen;
+}
+.buttons .col-sm-3 span:hover{
+  background-color: seagreen;
+}
+.buttons{
+  margin-top:15px;
+}
+body{
+  background-color:#ECF0F1;
+}
+.middle_page{
+  margin-top:15px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 10px 35px -7px rgba(158,158,158,0.58);
+  -moz-box-shadow: 0px 10px 35px -7px rgba(158,158,158,0.58);
+  box-shadow: 0px 10px 35px -7px rgba(158,158,158,0.58);
+}
+.yandex-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+}
+.yandex-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}

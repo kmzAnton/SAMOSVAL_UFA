@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%include ../partials/head%>
+    <link rel = "stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container-fluid page">
+      <div class="row">
+        <div class="col-sm-3 side">
+          <div class="get_price_circle hidden">Показать цену</div>
+          
+        </div>
+        
+        <div class="col-sm-6">
+          <div class="container-fluid middle_page">
+            
+            <span class="text-center"><h1>samosval_ufa</h1></span>
+            <span class="text-center"><h6>онлайн-калькулятор стоимости <br>доставки сыпучих материалов</h6></span><br>
+            
+            <%include ../partials/add1%>
+            
+            <div class="col-sm-12 text-center">
+              <h5><b>Зоны доставки</b></h5>
+            </div>
+            <div class="col-sm-12 yandex-maps">
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bb71dc8d7624f407629fa088a4dfe0505b0b2b6fa41fd6470925e6e3f960d0b&amp;source=constructor" width="830" height="700" frameborder="0"></iframe>
+            </div>
+
+            <div class="row buttons">
+              <div class="col-sm-2">
+                <span class="btn btn-sea">Зона 1</span>					
+              </div>
+              <div class="col-sm-3">
+                <span class="btn btn-sea">Зона 2</span>					
+              </div>
+              <div class="col-sm-2">
+                <span class="btn btn-sea">Зона 3</span>					
+              </div>
+              <div class="col-sm-3">
+                <span class="btn btn-sea">Зона 4</span>					
+              </div>
+              <div class="col-sm-2">
+                <span class="btn btn-sea">Зона 5</span>					
+              </div>
+            </div>
+            
+            <div class="row cards">
+              
+              <%include ../partials/card%>
+            </div>
+            
+            <div class="col-sm-12">
+              <button class="btn btn-lg btn-info get_price" disabled>
+                Узнать стоимость
+              </button>              
+            </div>
+            <div class="over_show_res hidden">
+              <span>Телефон для заказа: <b class="red">8-917-34-68-333</b></span><br>
+              <span><b>Стоимость Вашего заказа:</b></span>
+            </div>
+            <div class="col-sm-12 show_res text-center"></div>
+            <small class="oferta hidden">Указанная цена имеет ознакомительный характер, конечную цену узнавайте по тел 8-917-34-68-333</small>
+            
+          </div>
+        </div>
+        
+        <div class="col-sm-3 side">
+          
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/for_calc_page.js"></script>
+</html>

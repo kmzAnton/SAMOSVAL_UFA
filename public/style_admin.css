@@ -1,0 +1,49 @@
+.hidden{
+  display:none;
+}
+.tog{
+  width: 100px;
+}
+.vols{
+  width:100%;
+/*   margin-bottom: 10px; */
+}
+.collapse{
+  margin-top:0;
+  margin-bottom: 10px;
+}
+.for_form{
+}
+.panel{
+  background-color: lightgray;
+/*   height: 150px; */
+}
+.btn-warning{
+  margin-bottom: 10px;
+  color: white;
+  width: 100%;
+}
+.btn-warning:hover{
+  color: white;
+}
+.add_items_to_db{
+  margin:0;
+  max-height: 70px;
+}
+.elem_header{
+  margin:5px 15px;
+  min-width: 150px;
+}
+#accordion{
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(158,158,158,0.75);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(158,158,158,0.75);
+  box-shadow: 0px 0px 10px -2px rgba(158,158,158,0.75);
+}
+.container-fluid{
+  background-color: white;
+}
+
+.col-sm-6{
+  padding: 25px 15px;
+/*   min-height: 300px; */
+}  
