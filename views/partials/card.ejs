@@ -1,0 +1,68 @@
+<%include ./add2%>
+<%data.forEach(function(item){item.zone.materials.forEach(function(elem, ind){%>
+  <%if(elem.isAvail){%>
+    <div class="col-sm-4 hidden box<%=item.zone_name%>" >
+
+      <div class="card mb-3 shadow_for_cards zone<%=item.zone_name%>">
+        
+        <div class="card-header"><h5><%= elem.header%></h5></div>
+        <div class="card-body">
+          <%if(elem.short_desc){%>
+            <div class="card-title"><%=elem.short_desc%>
+              <button type="button" class="btn btn-xs btn-outline-info" data-toggle="modal" data-target="#exampleModal+<%=item.zone_name + elem.name%>">
+                &#8226 &#8226 &#8226
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal+<%=item.zone_name + elem.name%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel+<%=item.zone_name + elem.name%>"><%=elem.header%></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <%=elem.desc%>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <%}else{%>
+            <div class="card-title"><%=elem.desc%></div>
+          <%}%>
+          <small class="text-info card-text">Выберите <span class="add">нужный вам</span> объём</small>
+          
+          
+              <div class="col-sm-12 vol_option mat+<%=elem.name%>">
+              <%elem.vol.forEach(function(each){%>
+                
+                <%if(each.isAvail){%>
+                  <button class="btn btn-sm options">
+                    <div class="for_btn icon_float">
+                      <i class="fa fa-check-circle hide"></i>
+                    </div>
+                    <span class="for_btn">
+                      <%=each.amount%> <%if(each.amount.toString().length<=2){%>м<sup>3</sup><%}%>
+                    </span>   
+                  </button>
+                 <%}%>
+                
+                <%});%>
+                <button class="btn btn-sm btn-primary hidden get_price_bottom">
+                  Узнать цену
+                </button>
+              </div>
+           
+
+        </div>
+      </div>
+    </div>
+  <%}%>
+
+<%})})%>

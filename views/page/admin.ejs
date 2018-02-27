@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%include ../partials/head%>
+    <link rel = "stylesheet" href="/style_admin.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 accordion">
+          <div id="accordion">
+            
+            <%data.forEach(function(item){%>
+              <div class="card">
+                <div class="card-header" id="heading<%= item.zone_name%>">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse<%= item.zone_name%>" aria-expanded="true" aria-controls="collapse<%= item.zone_name%>">
+                      Зона <%= item.zone_name%>
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapse<%= item.zone_name%>" class="collapse" aria-labelledby="heading<%= item.zone_name%>" data-parent="#accordion">
+                  <div class="card-body">
+                    Выберите материалы:<br>
+                    <div class="row buttons_space">
+                      <%item.zone.materials.forEach(function(elem){%>
+                      <button class="btn btn-primary elem_header" value="<%=elem.header%>"><%=elem.header%></button>
+                      <%})%>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div> 
+            <%})%>
+            
+          </div>
+        </div>
+        
+        <div class="col-sm-6 panel">
+          
+          <div class="row add_items_to_db">
+              <button class="btn btn-warning">Добавить зону</button>
+              <button class="btn btn-warning">Добавить материал</button>  
+          </div><br><br>
+          
+          
+          <div class="col-sm-12 for_form">
+            
+            <form action="/editDb" method="POST">
+              
+              <div class="form-group row">
+                <label for="inputZone" class="col-sm-4 col-form-label">Зона</label>
+                <div class="col-sm-8">
+                  <input type="text" name="inputZone" class="form-control" id="inputZone" placeholder="..." readonly>
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="inputName" class="col-sm-4 col-form-label">Имя</label>
+                <div class="col-sm-8">
+                  <input type="text" name="inputName" class="form-control" id="inputName" placeholder="..." readonly>
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="inputHeader" class="col-sm-4 col-form-label">Заголовок</label>
+                <div class="col-sm-8">
+                  <input type="text" name="inputHeader" class="form-control" id="inputHeader" placeholder="...">
+                </div>
+              </div>
+              
+              <div class="form-group row">
+                <label for="inputDesc" class="col-sm-4 col-form-label">Описание</label>
+                <div class="col-sm-8">
+                  <textarea class="form-control" name="inputDesc" rows="8" id="inputDesc" placeholder="..."></textarea>
+                </div>
+              </div>
+                
+              <div class="form-group row">
+                <label for="inputAvails" class="col-sm-4 col-form-label">Доступен ли материал?</label>
+                <div class="col-sm-8" id="inputAvails">
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons" id="inputAvail">
+                    <label class="btn btn-info tog" id="true">
+                      <input type="radio" name="options" id="false_radio" autocomlplete="off" value="true">Да
+                    </label>
+                    <label class="btn btn-info tog" id="false">
+                      <input type="radio" name="options" id="false_radio" value="false" autocomplete="off">Нет
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row volumes"></div>
+              
+              <input type="submit" class="btn btn-block btn-success hidden" value="Сохранить">
+                
+            </form>
+          </div>
+              
+        </div>
+          
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/for_admin_page.js"></script>
+    
+  </body>
+</html>
